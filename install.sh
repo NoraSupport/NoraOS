@@ -25,7 +25,7 @@ makepkg -si
 cd $LOC
 
 # Install hyprland and main packages
-sudo pacman -S < $LOC/assets/pkg/pkg.list --noconfirm
+sudo pacman -S - < $LOC/assets/pkg/pkg.list --noconfirm
 
 # Install AUR packages
-yay -S < $LOC/assets/pkg/pkg_aur.list --noconfirm
+yay -S - < $LOC/assets/pkg/pkg_aur.list --noconfirm
