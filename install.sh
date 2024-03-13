@@ -10,8 +10,12 @@
 # No really, read before you act!
 # -------------------------------
 
+# Define script location
 LOC=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 echo "$LOC"
+
+# Pacman go brrrr
+sed '/ParallelDownloads/s/^#//g' -o /etc/pacman.conf
 
 # Update pacman and pull base-devel & git
 sudo pacman -Syu --needed base-devel git --noconfirm
@@ -32,7 +36,9 @@ sudo pacman -S - < $LOC/assets/pkg/pkg.list --noconfirm
 yay -S - < $LOC/assets/pkg/pkg_aur.list --noconfirm
 
 # Copy config files
-cp -r $LOC/config/* $HOME/.config/
+mkdir -p $HOME/.config/{hypr,bpytop,ranger,kitty}
+cp -r $LOC/config/hypr/* $HOME/.config/hypr/
+cp -R $LOC/config/bpytop/* $HOME/.config/bpytop/
 
 # Copy assets
 mkdir -p $HOME/.wallpapers
