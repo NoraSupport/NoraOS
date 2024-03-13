@@ -39,12 +39,14 @@ yay -S - < $LOC/assets/pkg/pkg_aur.list --noconfirm
 # Copy config files
 ## Make the folders
 mkdir -p $HOME/.config/{hypr,ranger,bpytop}
+mkdir -p $HOME/.config/hypr/{themes,scripts}
 mkdir -p $HOME/.config/ranger/plugins
 
 ## Copy the configs
 cp -r $LOC/config/hypr/*.conf $HOME/.config/hypr/
+cp -r $LOC/config/hypr/themes/* $HOME/.config/hypr/themes/
 cp -r $LOC/config/bpytop/*.conf $HOME/.config/bpytop/
-cp -r $LOC/config/ranger/*.conf $home/.config/ranger/
+cp -r $LOC/config/ranger/*.conf $HOME/.config/ranger/
 cp -r $LOC/assets/git/ranger_devicons $HOME/.config/ranger/plugins/ranger_devicons
 #cp -R $LOC/config/bpytop/* $HOME/.config/bpytop/
 

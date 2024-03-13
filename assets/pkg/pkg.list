@@ -29,9 +29,7 @@ pacman-contrib
 parallel
 jq
 imagemagick
-qt5-imageformats
 ffmpegthumbs
-kde-cli-tools
 nwg-look
 qt5ct
 qt6ct
@@ -41,9 +39,9 @@ qt6-wayland
 firefox
 kitty
 nemo
-ark
+unzip
+unrar
 vim
-zsh
 fish
 neofetch
 hunspell
