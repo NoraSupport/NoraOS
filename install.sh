@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # -------------------------------
 # NoraOS installation script
@@ -18,6 +18,7 @@ sudo pacman -Syu --needed base-devel git --noconfirm
 
 # Pull all the gits
 git clone https://aur.archlinux.org/yay.git $LOC/assets/git/yay
+git clone https://github.com/vinceliuice/Orchis-theme $LOC/assets/git/Orchis-theme
 
 # Install yay
 cd $LOC/assets/git/yay
@@ -29,3 +30,13 @@ sudo pacman -S - < $LOC/assets/pkg/pkg.list --noconfirm
 
 # Install AUR packages
 yay -S - < $LOC/assets/pkg/pkg_aur.list --noconfirm
+
+# Copy config files
+cp -r $LOC/config/* $HOME/.config/
+
+# Copy assets
+mkdir -p $HOME/.wallpapers
+cp -r $LOC/assets/style/wallpapers/* $HOME/.wallpapers/
+
+# Install theme
+sh $LOC/assets/git/Orchis-theme/install.sh -n NoraOS-GTK -t all -l --tweaks macos primary
