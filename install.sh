@@ -23,6 +23,7 @@ sudo pacman -Syu --needed base-devel git --noconfirm
 # Pull all the gits
 git clone https://aur.archlinux.org/yay.git $LOC/assets/git/yay
 git clone https://github.com/vinceliuice/Orchis-theme $LOC/assets/git/Orchis-theme
+git clone https://github.com/alexanderjeurissen/ranger_devicons $LOC/assets/git/ranger_devicons
 
 # Install yay
 cd $LOC/assets/git/yay
