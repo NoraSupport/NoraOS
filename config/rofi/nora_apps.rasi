@@ -20,7 +20,7 @@ configuration {
     background:     #222D32FF;
     background-alt: #29353BFF;
     foreground:     #B8C2C6FF;
-    selected:       #00BCD4FF;
+    selected:       #9d2a4cFF;
     active:         #21FF90FF;
     urgent:         #FF4B60FF;
 }
